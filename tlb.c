@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     }
     free(a);
     long elapsed_ns = (end.tv_sec - start.tv_sec) * 1000000000L + (end.tv_nsec - start.tv_nsec);
-    printf("%ld", elapsed_ns);
+    printf("%ld", elapsed_ns / (loops * pages));
     exit(0);
 }
 

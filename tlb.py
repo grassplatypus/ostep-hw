@@ -11,7 +11,7 @@ for i in range(int(trials)):
                             text=True, stdout=subprocess.PIPE)
     print(result.stdout, "ns")
     hist_pages.append(pages)
-    hist_times.append(int(result.stdout) / pages)
+    hist_times.append(int(result.stdout))
     pages *= 2
 
 plt.figure(figsize=(10, 10))
